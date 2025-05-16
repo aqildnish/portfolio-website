@@ -1,49 +1,62 @@
-# Muhammad Aqil Danish - Portfolio Website
+# Portfolio Website
 
-A modern, responsive portfolio website showcasing my skills, education, projects, and professional experience.
+A modern, responsive portfolio website built with HTML, Tailwind CSS, and JavaScript. This website showcases my professional background, skills, projects, and activities.
 
-## 🌟 Features
+## Features
 
-- Responsive Design
-- Dark Mode
-- Animated Sections
-- Interactive UI Elements
-- Contact Form
-- Skills Showcase
-- Project Gallery
-- Education Timeline
+- Responsive design that works on all devices
+- Modern UI with glassmorphism effects
+- Smooth scrolling and animations
+- Interactive sections for projects and skills
+- Contact form for easy communication
+- Dark theme with custom color scheme
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - HTML5
-- CSS3
+- Tailwind CSS
 - JavaScript
-- GSAP (Animations)
 - Font Awesome Icons
 - Google Fonts
 - AOS (Animate On Scroll)
+- GSAP (GreenSock Animation Platform)
 - Vanilla Tilt
 
-## 🚀 Live Demo
+## Sections
 
-Visit the live website: [Aqil Danish Portfolio](https://aqildnish.github.io/portfolio-website)
+1. Home - Introduction and hero section
+2. About - Professional summary
+3. Education - Academic background
+4. Skills - Technical and soft skills
+5. Projects - Portfolio of work
+6. Activities - Leadership roles and participations
+7. Contact - Contact form and information
 
-## 📱 Sections
+## Setup
 
-- **Home**: Introduction and quick navigation
-- **About**: Personal background and interests
-- **Education**: Academic background and achievements
-- **Skills**: Technical and soft skills
-- **Projects**: Showcase of notable projects
-- **Activities**: Leadership roles and participations
-- **Contact**: Get in touch form and contact information
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/portfolio-website.git
+```
 
-## 📞 Contact
+2. Open the project folder:
+```bash
+cd portfolio-website
+```
 
-- Email: aqildanish12@gmail.com
-- LinkedIn: [Aqil Danish](https://www.linkedin.com/in/aqil-danish-4548641b1)
-- Location: Mantin, Negeri Sembilan
+3. Open `index.html` in your browser or use a local server:
+```bash
+# Using Python
+python -m http.server 8000
 
-## 📄 License
+# Using Node.js
+npx serve
+```
 
-This project is open source and available under the [MIT License](LICENSE). 
+## Customization
+
+The website uses Tailwind CSS for styling. The main configuration can be found in the `tailwind.config` section in `index.html`. Colors, fonts, and animations can be customized there.
+
+## License
+
+MIT License - feel free to use this template for your own portfolio! 
