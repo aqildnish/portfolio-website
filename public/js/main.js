@@ -1,5 +1,14 @@
-// Initialize AOS
+// Initialize AOS and handle loading
 document.addEventListener('DOMContentLoaded', () => {
+    // Remove loader immediately
+    const loader = document.getElementById('loader');
+    if (loader) {
+        loader.style.opacity = '0';
+        loader.style.display = 'none';
+        document.body.classList.add('loaded');
+    }
+
+    // Initialize AOS
     AOS.init({
         duration: 800,
         easing: 'ease-out',
@@ -8,21 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         disable: window.innerWidth < 768
     });
 
-    // Remove loader
-    const loader = document.getElementById('loader');
-    if (loader) {
-        setTimeout(() => {
-            loader.style.opacity = '0';
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500);
-        }, 1000);
-    }
-
-    // Initialize typing animation
-    initTypingAnimation();
-    
     // Initialize other features
+    initTypingAnimation();
     initMobileMenu();
     initSmoothScroll();
     initCursor();
