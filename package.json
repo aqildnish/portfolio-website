@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon server.js",
-    "build": "next build",
+    "build": "echo 'No build step required'",
     "start": "node server.js",
     "lint": "next lint"
   },
@@ -33,13 +33,16 @@
   },
   "description": "A modern portfolio website built with Node.js and Express",
   "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aqildnish/portfolio-website.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["portfolio", "nodejs", "express"],
+  "author": "Muhammad Aqil Danish",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/aqildnish/portfolio-website/issues"
   },
