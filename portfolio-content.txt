@@ -1,0 +1,179 @@
+# Portfolio Content Guide
+
+## Personal Information
+- Full Name: Muhammad Aqil Danish bin Saad Roni
+- Title: Network Computer Student
+- Email: aqildanish12@gmail.com
+- Location: Mantin, Negeri Sembilan
+- About Me: A final year student pursuing a Bachelor of Computer Science (Hons.) Computer Networks with current CGPA 3.7. A dedicated and proactive person with a strong interest in network technologies, designing, and problem solving. Having a strong academic background with a comprehensive understanding of core networking fundamentals, configuration and troubleshooting. Currently seeking an internship placement as a Network Engineer for the period of 15th September 2025 until 19th December 2025 (14 weeks).
+
+## Social Links
+- GitHub: [-]
+- LinkedIn: www.linkedin.com/in/aqil-danish-4548641b1
+- Twitter (optional): [-]
+
+## Skills
+Technical Skills:
+- [List your programming languages]
+- [List your frameworks]
+- [List your tools]
+- [List your databases]
+
+Soft Skills:
+- [List 3-5 key soft skills]
+
+## Projects
+For each project, provide:
+1. Project Name
+2. Description (2-3 sentences)
+3. Technologies Used
+4. Live Demo Link (if available)
+5. GitHub Repository Link
+6. Screenshot/Image
+
+## Experience
+For each position:
+1. Company Name
+2. Position Title
+3. Duration (MM/YYYY - MM/YYYY)
+4. Key Responsibilities (3-5 bullet points)
+5. Technologies Used
+6. Achievements
+
+## Education
+- Degree Name
+- Institution
+- Duration
+- Relevant Coursework (optional)
+- GPA (if notable)
+
+## Certifications (if any)
+- Certification Name
+- Issuing Organization
+- Date Obtained
+- Credential ID (if available)
+
+## Contact Information
+- Professional Email
+- Phone: 014-7385972
+- Preferred Contact Method
+
+## Portfolio Images
+Please prepare:
+1. Your professional headshot/profile picture (recommended size: 400x400px)
+2. Project screenshots (recommended size: 1280x720px)
+3. Company logos (if applicable)
+4. Skills icons 
+
+## Typing Animation Words
+typing_words:
+  - Network Engineer
+  - Computer Science Student
+  - Problem Solver
+
+## Education
+education:
+  - institution: Universiti Teknologi MARA (UITM), Jasin, Melaka
+    period: March 2023 – Present
+    degree: Bachelor of Computer Science (Hons.) Computer Networks
+    achievement: Current CGPA: 3.7
+    
+  - institution: Universiti Teknologi MARA (UITM), Seremban, Negeri Sembilan
+    period: October 2020 – February 2023
+    degree: Diploma in Actuarial Science
+    achievements:
+      - Vice Chancellor's Award with CGPA: 3.77
+      - MUET: Band 4.5
+
+## Projects
+projects:
+  - name: Enterprise LAN Implementation
+    course: Routing and Switching Technologies (ITT532)
+    
+  - name: Network Security - Monitoring DoS attack in a Computer Network
+    course: Information and Network Security (ITT450)
+    
+  - name: Create Basic Web Server Using C Socket and HTML
+    course: Network Programming (ITT440)
+    
+  - name: Network Automation using Python and GNS3
+    course: Wide Area Network Technologies and Services (ITT633)
+    
+  - name: UiTM KPPIM New Campus Network Design Project
+    course: Network Design and Management (ITT550)
+    
+  - name: Network Vulnerability Analysis and Visualization of Piracy Websites
+    course: Final Year Project
+    description: Using Nmap, Gemini API, MySQL and Grafana
+
+## Achievements
+achievements:
+  degree:
+    - semester: 2nd Semester
+      gpa: 3.67
+    - semester: 3rd Semester
+      gpa: 3.95
+    - semester: 4th Semester
+      gpa: 3.62
+    - semester: 5th Semester
+      gpa: 3.59
+  
+  other:
+    - Vice Chancellor's Award (Final CGPA: 3.77)
+    - MUET (Band 4.5)
+
+## Activities and Leadership
+activities:
+  organizer:
+    - Online Sharing Session with University of Essex, Colchester Campus, England
+    - Video Editing Talk: Bersama Cikgu Ulwan
+  
+  leadership:
+    - position: Head of the Multimedia and Publicity Exco
+      organization: Seremban Actuarial Science Committee (SASCOMM)
+    - position: Head of the Sports Exco
+      organization: Networking Society Club (NetS)
+  
+  participant:
+    - Bengkel dan Pertandingan Keselamatan Siber: rawSEC Kunjung Selatan Keselamatan Siber dan CTF (rAKSASA)
+    - Coding Competition: C++
+  
+  facilitator:
+    - Carnival Fun STEM with Scientist at SMK Dato' Abdul Rahman Ya'kub (SDARY)
+
+## Skills
+skills:
+  soft_skills:
+    - Team Leadership
+    - Effective Communication
+    - Workplace Flexibility
+    - Problem-solving
+    - Troubleshooting
+  
+  technical_skills:
+    intermediate:
+      - GNS3
+      - Python
+      - MySQL
+      - Windows Server
+      - Ubuntu
+      - Kali Linux
+    
+    advanced:
+      - C++
+      - Cisco Packet Tracer
+    
+    communication_tools:
+      - Zoom
+      - WhatsApp
+      - Webex
+      - Microsoft Teams
+      - Google Meet
+  
+  languages:
+    - language: Malay
+      level: Native
+    - language: English
+      level: Fluent
+    - language: Arabic
+      level: Basic 
