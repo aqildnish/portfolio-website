@@ -1,74 +1,49 @@
-# Modern Portfolio Website
+# Muhammad Aqil Danish - Portfolio Website
 
-A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+A modern, responsive portfolio website showcasing my skills, education, projects, and professional experience.
 
-## Prerequisites
+## 🌟 Features
 
-Before you begin, ensure you have the following installed:
-- Node.js (LTS version)
-- Git
+- Responsive Design
+- Dark Mode
+- Animated Sections
+- Interactive UI Elements
+- Contact Form
+- Skills Showcase
+- Project Gallery
+- Education Timeline
 
-## Getting Started
+## 🛠️ Technologies Used
 
-1. Clone this repository:
-```bash
-git clone [your-repo-url]
-cd [your-repo-name]
-```
+- HTML5
+- CSS3
+- JavaScript
+- GSAP (Animations)
+- Font Awesome Icons
+- Google Fonts
+- AOS (Animate On Scroll)
+- Vanilla Tilt
 
-2. Install dependencies:
-```bash
-npm install
-```
+## 🚀 Live Demo
 
-3. Run the development server:
-```bash
-npm run dev
-```
+Visit the live website: [Aqil Danish Portfolio](https://aqildnish.github.io/portfolio-website)
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+## 📱 Sections
 
-## Customizing Your Portfolio
+- **Home**: Introduction and quick navigation
+- **About**: Personal background and interests
+- **Education**: Academic background and achievements
+- **Skills**: Technical and soft skills
+- **Projects**: Showcase of notable projects
+- **Activities**: Leadership roles and participations
+- **Contact**: Get in touch form and contact information
 
-1. Fill in your information in the `portfolio-content.txt` file
-2. Replace images in the `public/images` directory with your own
-3. Update the content in the components as needed
+## 📞 Contact
 
-## Deployment (Free Hosting)
+- Email: aqildanish12@gmail.com
+- LinkedIn: [Aqil Danish](https://www.linkedin.com/in/aqil-danish-4548641b1)
+- Location: Mantin, Negeri Sembilan
 
-1. Create an account on [Vercel](https://vercel.com)
-2. Connect your GitHub repository
-3. Deploy with zero configuration
+## 📄 License
 
-## Features
-
-- ⚡️ Next.js 13 for fast page loads
-- 🎨 Tailwind CSS for styling
-- 📱 Fully responsive design
-- 🌐 SEO optimized
-- 🚀 Fast performance
-- 💻 Modern UI/UX
-- 🔥 Zero cost hosting with Vercel
-
-## Tech Stack
-
-- Next.js
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- React Icons
-
-## Project Structure
-
-```
-├── components/     # React components
-├── pages/         # Next.js pages
-├── public/        # Static assets
-├── styles/        # Global styles
-├── types/         # TypeScript types
-└── utils/         # Utility functions
-```
-
-## License
-
-This project is open source and available under the MIT License. 
+This project is open source and available under the [MIT License](LICENSE). 

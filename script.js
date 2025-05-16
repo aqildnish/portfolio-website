@@ -175,6 +175,12 @@ function initSmoothScrolling() {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
+                // Close mobile menu if open
+                navLinks.classList.remove('active');
+                menuBtn.querySelector('i').classList.remove('fa-times');
+                menuBtn.querySelector('i').classList.add('fa-bars');
+                
+                // Scroll to target
                 target.scrollIntoView({
                     behavior: 'auto',
                     block: 'start',
@@ -409,4 +415,42 @@ function handleSkillsZoom() {
 // Initialize skills zoom effect
 document.addEventListener('DOMContentLoaded', () => {
     handleSkillsZoom();
-}); 
+});
+
+// Mobile Menu Functionality
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+const navLinksItems = document.querySelectorAll('.nav-links a');
+
+if (menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuBtn.querySelector('i').classList.toggle('fa-bars');
+        menuBtn.querySelector('i').classList.toggle('fa-times');
+    });
+}
+
+// Close menu when clicking a link
+navLinksItems.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuBtn.querySelector('i').classList.remove('fa-times');
+        menuBtn.querySelector('i').classList.add('fa-bars');
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('nav') && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        menuBtn.querySelector('i').classList.remove('fa-times');
+        menuBtn.querySelector('i').classList.add('fa-bars');
+    }
+});
+
+// Disable animations on mobile devices
+if (window.innerWidth < 768) {
+    document.querySelectorAll('[data-aos]').forEach(element => {
+        element.removeAttribute('data-aos');
+    });
+} 
