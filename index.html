@@ -49,20 +49,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gradient-to-br from-dark via-dark to-primary/20 text-white min-h-screen font-sans">
+    <!-- Page Loader -->
+    <div id="loader" class="fixed inset-0 bg-dark z-[9999] flex items-center justify-center transition-all duration-500">
+        <div class="text-center">
+            <div class="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+            <div class="mt-4 text-lg">Loading...</div>
+        </div>
+    </div>
+
     <!-- Cursor Follow Effect -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
     <!-- Animated Background -->
     <div class="animated-bg"></div>
-
-    <!-- Page Loader -->
-    <div class="fixed inset-0 bg-dark z-50 flex items-center justify-center transition-opacity duration-500" id="loader">
-        <div class="text-center loading-pulse">
-            <div class="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-            <div class="mt-4 text-lg">Loading...</div>
-        </div>
-    </div>
 
     <!-- Header/Navigation -->
     <header class="fixed top-0 left-0 w-full glass-effect z-40 shadow-lg">
