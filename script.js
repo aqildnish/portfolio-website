@@ -455,4 +455,155 @@ if (window.innerWidth < 768) {
     document.querySelectorAll('[data-aos]').forEach(element => {
         element.removeAttribute('data-aos');
     });
-} 
+}
+
+// Loader
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    }, 1000);
+});
+
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});
+
+// Mobile Menu Toggle
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.innerHTML = mobileMenu.classList.contains('hidden') 
+        ? '<i class="fas fa-bars"></i>' 
+        : '<i class="fas fa-times"></i>';
+});
+
+// Typing Animation
+const typingElement = document.getElementById('typing');
+const words = ['Network Engineer', 'Problem Solver', 'Tech Enthusiast'];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let isWaiting = false;
+
+function type() {
+    const currentWord = words[wordIndex];
+    
+    if (isDeleting) {
+        typingElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    if (!isDeleting && charIndex === currentWord.length) {
+        isWaiting = true;
+        setTimeout(() => {
+            isDeleting = true;
+            isWaiting = false;
+        }, 2000);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+    }
+
+    const typingSpeed = isDeleting ? 100 : isWaiting ? 1000 : 200;
+    setTimeout(type, typingSpeed);
+}
+
+type();
+
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - 80,
+                behavior: 'smooth'
+            });
+            // Close mobile menu if open
+            mobileMenu.classList.add('hidden');
+            menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+    });
+});
+
+// Cursor Follow Effect
+const cursorDot = document.querySelector('.cursor-dot');
+const cursorOutline = document.querySelector('.cursor-outline');
+
+window.addEventListener('mousemove', (e) => {
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+
+    cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+    }, { duration: 500, fill: "forwards" });
+});
+
+// Add hover effect to all interactive elements
+const interactiveElements = document.querySelectorAll('a, button, .hover\\:scale-105');
+
+interactiveElements.forEach(elem => {
+    elem.addEventListener('mouseenter', () => {
+        cursorDot.style.transform = 'scale(0.5)';
+        cursorOutline.style.transform = 'scale(1.5)';
+    });
+    
+    elem.addEventListener('mouseleave', () => {
+        cursorDot.style.transform = 'scale(1)';
+        cursorOutline.style.transform = 'scale(1)';
+    });
+});
+
+// Form validation and submission
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your form submission logic here
+        alert('Thank you for your message! I will get back to you soon.');
+        contactForm.reset();
+    });
+}
+
+// Add scroll-triggered animations using GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate sections on scroll
+gsap.utils.toArray('section').forEach(section => {
+    gsap.from(section, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "top 50%",
+            toggleActions: "play none none reverse"
+        }
+    });
+});
+
+// Initialize Vanilla Tilt for project cards
+VanillaTilt.init(document.querySelectorAll(".project-card"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2
+}); 

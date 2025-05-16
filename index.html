@@ -53,30 +53,33 @@
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
     <!-- Page Loader -->
     <div class="fixed inset-0 bg-dark z-50 flex items-center justify-center transition-opacity duration-500" id="loader">
-        <div class="text-center">
+        <div class="text-center loading-pulse">
             <div class="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
             <div class="mt-4 text-lg">Loading...</div>
         </div>
     </div>
 
     <!-- Header/Navigation -->
-    <header class="fixed top-0 left-0 w-full bg-dark/95 backdrop-blur-md z-40 shadow-lg">
+    <header class="fixed top-0 left-0 w-full glass-effect z-40 shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-primary">Aqil Danish</div>
-                <button class="lg:hidden text-2xl" aria-label="Toggle Menu" id="menuBtn">
+                <div class="text-2xl font-bold gradient-text">Aqil Danish</div>
+                <button class="lg:hidden text-2xl animated-button" aria-label="Toggle Menu" id="menuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul class="hidden lg:flex items-center space-x-8">
-                    <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
-                    <li><a href="#about" class="hover:text-primary transition-colors">About</a></li>
-                    <li><a href="#education" class="hover:text-primary transition-colors">Education</a></li>
-                    <li><a href="#skills" class="hover:text-primary transition-colors">Skills</a></li>
-                    <li><a href="#projects" class="hover:text-primary transition-colors">Projects</a></li>
-                    <li><a href="#activities" class="hover:text-primary transition-colors">Activities</a></li>
-                    <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                    <li><a href="#home" class="hover:text-primary transition-colors hover-lift">Home</a></li>
+                    <li><a href="#about" class="hover:text-primary transition-colors hover-lift">About</a></li>
+                    <li><a href="#education" class="hover:text-primary transition-colors hover-lift">Education</a></li>
+                    <li><a href="#skills" class="hover:text-primary transition-colors hover-lift">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-primary transition-colors hover-lift">Projects</a></li>
+                    <li><a href="#activities" class="hover:text-primary transition-colors hover-lift">Activities</a></li>
+                    <li><a href="#contact" class="hover:text-primary transition-colors hover-lift">Contact</a></li>
                 </ul>
             </div>
             <!-- Mobile Menu -->
@@ -95,9 +98,9 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center px-4 pt-20">
+    <section id="home" class="min-h-screen flex items-center justify-center px-4 pt-20 relative">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 gradient-text" data-aos="fade-up" data-aos-delay="200">
                 Hi, I'm <span class="text-primary">Muhammad Aqil Danish</span>
             </h1>
             <div class="text-2xl md:text-3xl lg:text-4xl mb-6" data-aos="fade-up" data-aos-delay="400">
@@ -107,10 +110,10 @@
                 A passionate Network Computer Student with a focus on network technologies and problem solving
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="800">
-                <a href="#contact" class="bg-primary hover:bg-primary/80 text-white px-8 py-3 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg">
+                <a href="#contact" class="animated-button bg-primary hover:bg-primary/80 text-white px-8 py-3 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg">
                     Contact Me
                 </a>
-                <a href="#projects" class="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg transition-all transform hover:-translate-y-1">
+                <a href="#projects" class="animated-button border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg transition-all transform hover:-translate-y-1">
                     View Work
                 </a>
             </div>
