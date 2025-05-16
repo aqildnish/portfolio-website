@@ -8,19 +8,15 @@
 - About Me: A final year student pursuing a Bachelor of Computer Science (Hons.) Computer Networks with current CGPA 3.7. A dedicated and proactive person with a strong interest in network technologies, designing, and problem solving. Having a strong academic background with a comprehensive understanding of core networking fundamentals, configuration and troubleshooting. Currently seeking an internship placement as a Network Engineer for the period of 15th September 2025 until 19th December 2025 (14 weeks).
 
 ## Social Links
-- GitHub: [-]
+- GitHub: [https://github.com/aqildnish]
 - LinkedIn: www.linkedin.com/in/aqil-danish-4548641b1
-- Twitter (optional): [-]
 
 ## Skills
 Technical Skills:
-- [List your programming languages]
+- [List your programming languages] ; Python, C++, Ubuntu, Kali Linux
 - [List your frameworks]
 - [List your tools]
-- [List your databases]
-
-Soft Skills:
-- [List 3-5 key soft skills]
+- [List your databases] ; MySQL, PhpMyAdmin, MariaDB
 
 ## Projects
 For each project, provide:
@@ -31,14 +27,6 @@ For each project, provide:
 5. GitHub Repository Link
 6. Screenshot/Image
 
-## Experience
-For each position:
-1. Company Name
-2. Position Title
-3. Duration (MM/YYYY - MM/YYYY)
-4. Key Responsibilities (3-5 bullet points)
-5. Technologies Used
-6. Achievements
 
 ## Education
 - Degree Name
@@ -56,7 +44,7 @@ For each position:
 ## Contact Information
 - Professional Email
 - Phone: 014-7385972
-- Preferred Contact Method
+- Preferred Contact Method 
 
 ## Portfolio Images
 Please prepare:
@@ -67,9 +55,7 @@ Please prepare:
 
 ## Typing Animation Words
 typing_words:
-  - Network Engineer
-  - Computer Science Student
-  - Problem Solver
+  - Computer Networking Student at UiTM
 
 ## Education
 education:

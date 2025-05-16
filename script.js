@@ -3,12 +3,13 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // Typing Animation Variables
 const typingText = document.getElementById('typing');
-const words = ['Network Engineer', 'Computer Science Student', 'Problem Solver'];
+const words = ['Computer Networking Student at UiTM'];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 let isWaiting = false;
-let typingInterval = null;
+let lastTypingTime = 0;
+let typingAnimationFrame = null;
 
 // Initialize AOS with a slight delay to ensure proper loading
 document.addEventListener('DOMContentLoaded', () => {
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start typing animation if element exists
     if (typingText) {
         console.log('Starting typing animation');
-        type();
+        typingAnimationFrame = requestAnimationFrame(type);
     } else {
         console.log('Typing element not found');
     }
@@ -191,11 +192,23 @@ function initSmoothScrolling() {
     });
 }
 
-// Enhanced typing animation with error handling and cleanup
-function type() {
+// Enhanced typing animation with requestAnimationFrame
+function type(currentTime) {
     try {
-        if (!typingText) return;
+        if (!typingText) {
+            cancelAnimationFrame(typingAnimationFrame);
+            return;
+        }
+
+        // Control typing speed
+        const deltaTime = currentTime - lastTypingTime;
+        const typingSpeed = isDeleting ? 100 : 200;
         
+        if (deltaTime < typingSpeed) {
+            typingAnimationFrame = requestAnimationFrame(type);
+            return;
+        }
+
         const currentWord = words[wordIndex];
         
         if (isDeleting) {
@@ -206,28 +219,39 @@ function type() {
             charIndex++;
         }
 
+        lastTypingTime = currentTime;
+
         if (!isDeleting && charIndex === currentWord.length) {
             isWaiting = true;
-            clearInterval(typingInterval);
-            typingInterval = setTimeout(() => {
+            setTimeout(() => {
                 isDeleting = true;
                 isWaiting = false;
-                type();
+                typingAnimationFrame = requestAnimationFrame(type);
             }, 2000);
+            return;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             wordIndex = (wordIndex + 1) % words.length;
-            clearInterval(typingInterval);
-            typingInterval = setTimeout(type, 200);
-        } else {
-            clearInterval(typingInterval);
-            typingInterval = setTimeout(type, isDeleting ? 100 : 200);
+            typingAnimationFrame = requestAnimationFrame(type);
+            return;
         }
+
+        typingAnimationFrame = requestAnimationFrame(type);
     } catch (error) {
         console.error('Error in typing animation:', error);
-        clearInterval(typingInterval);
+        cancelAnimationFrame(typingAnimationFrame);
     }
 }
+
+// Cleanup function for typing animation
+function cleanupTypingAnimation() {
+    if (typingAnimationFrame) {
+        cancelAnimationFrame(typingAnimationFrame);
+    }
+}
+
+// Add cleanup on page unload
+window.addEventListener('unload', cleanupTypingAnimation);
 
 // Contact Form Handling with validation
 const contactForm = document.getElementById('contact-form');
@@ -284,7 +308,8 @@ if (contactForm) {
                 }
             });
         } catch (error) {
-            alert(error.message || 'An error occurred. Please try again.');
+            console.error('Form validation error:', error);
+            // Handle error appropriately
         }
     });
 }
@@ -478,119 +503,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start typing animation
     if (typingText) {
-        type();
+        typingAnimationFrame = requestAnimationFrame(type);
     }
 });
 
-// Typing Animation
-const typingElement = document.getElementById('typing');
-const words = ['Network Engineer', 'Problem Solver', 'Tech Enthusiast'];
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let isWaiting = false;
-
-function type() {
-    const currentWord = words[wordIndex];
-    
-    if (isDeleting) {
-        typingElement.textContent = currentWord.substring(0, charIndex - 1);
-        charIndex--;
-    } else {
-        typingElement.textContent = currentWord.substring(0, charIndex + 1);
-        charIndex++;
-    }
-
-    if (!isDeleting && charIndex === currentWord.length) {
-        isWaiting = true;
-        setTimeout(() => {
-            isDeleting = true;
-            isWaiting = false;
-        }, 2000);
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-    }
-
-    const typingSpeed = isDeleting ? 100 : isWaiting ? 1000 : 200;
-    setTimeout(type, typingSpeed);
-}
-
-// Mobile Menu Toggle
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.querySelector('.mobile-menu');
-
-if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        menuBtn.innerHTML = mobileMenu.classList.contains('hidden') 
-            ? '<i class="fas fa-bars"></i>' 
-            : '<i class="fas fa-times"></i>';
-    });
-}
-
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 80,
-                behavior: 'smooth'
-            });
-            // Close mobile menu if open
-            if (mobileMenu) {
-                mobileMenu.classList.add('hidden');
-                if (menuBtn) {
-                    menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            }
-        }
-    });
-});
-
-// Cursor Follow Effect
+// Cursor Effect Variables
 const cursorDot = document.querySelector('.cursor-dot');
 const cursorOutline = document.querySelector('.cursor-outline');
+let mouseX = 0;
+let mouseY = 0;
+let dotX = 0;
+let dotY = 0;
+let outlineX = 0;
+let outlineY = 0;
+let cursorAnimationFrame = null;
 
+// Optimized cursor movement with requestAnimationFrame
+function updateCursor(currentTime) {
+    if (!cursorDot || !cursorOutline) {
+        cancelAnimationFrame(cursorAnimationFrame);
+        return;
+    }
+
+    // Calculate smooth movement
+    const dotSpeed = 1;
+    const outlineSpeed = 0.15;
+
+    dotX += (mouseX - dotX) * dotSpeed;
+    dotY += (mouseY - dotY) * dotSpeed;
+    outlineX += (mouseX - outlineX) * outlineSpeed;
+    outlineY += (mouseY - outlineY) * outlineSpeed;
+
+    // Apply transforms using translate3d for better performance
+    cursorDot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0)`;
+    cursorOutline.style.transform = `translate3d(${outlineX}px, ${outlineY}px, 0)`;
+
+    cursorAnimationFrame = requestAnimationFrame(updateCursor);
+}
+
+// Track mouse movement
+function onMouseMove(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+}
+
+// Initialize cursor effect
 if (cursorDot && cursorOutline) {
-    window.addEventListener('mousemove', (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
+    // Add will-change to optimize animations
+    cursorDot.style.willChange = 'transform';
+    cursorOutline.style.willChange = 'transform';
 
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
+    // Start animation loop
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
+    cursorAnimationFrame = requestAnimationFrame(updateCursor);
 
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
+    // Handle cursor visibility
+    document.addEventListener('mouseenter', () => {
+        cursorDot.style.opacity = '1';
+        cursorOutline.style.opacity = '1';
     });
 
-    // Add hover effect to all interactive elements
-    document.querySelectorAll('a, button, .hover\\:scale-105').forEach(elem => {
-        elem.addEventListener('mouseenter', () => {
-            cursorDot.style.transform = 'scale(0.5)';
-            cursorOutline.style.transform = 'scale(1.5)';
-        });
-        
-        elem.addEventListener('mouseleave', () => {
-            cursorDot.style.transform = 'scale(1)';
-            cursorOutline.style.transform = 'scale(1)';
-        });
+    document.addEventListener('mouseleave', () => {
+        cursorDot.style.opacity = '0';
+        cursorOutline.style.opacity = '0';
     });
 }
 
-// Form validation and submission
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you for your message! I will get back to you soon.');
-        contactForm.reset();
-    });
+// Cleanup function for cursor effect
+function cleanupCursorEffect() {
+    if (cursorAnimationFrame) {
+        cancelAnimationFrame(cursorAnimationFrame);
+    }
+    window.removeEventListener('mousemove', onMouseMove);
 }
+
+// Add cleanup on page unload
+window.addEventListener('unload', cleanupCursorEffect);
 
 // Initialize GSAP animations
 if (typeof gsap !== 'undefined') {
@@ -620,4 +608,80 @@ if (typeof VanillaTilt !== 'undefined') {
         glare: true,
         "max-glare": 0.2
     });
-} 
+}
+
+// Debounce helper function
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Optimized scroll animations using Intersection Observer
+function initScrollAnimations() {
+    const animatedElements = document.querySelectorAll('[data-aos]');
+    
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('aos-animate');
+                // Optionally unobserve after animation
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Debounced scroll handler for performance
+const debouncedScroll = debounce(() => {
+    const scrolled = window.scrollY;
+    
+    // Update header transparency
+    const header = document.querySelector('header');
+    if (header) {
+        header.style.backgroundColor = scrolled > 50 ? 'rgba(0, 10, 26, 0.9)' : 'transparent';
+    }
+    
+    // Update back-to-top button visibility
+    const backToTop = document.querySelector('.back-to-top');
+    if (backToTop) {
+        backToTop.style.opacity = scrolled > 300 ? '1' : '0';
+        backToTop.style.visibility = scrolled > 300 ? 'visible' : 'hidden';
+    }
+}, 16); // ~60fps
+
+// Initialize scroll-based animations
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize scroll animations
+    initScrollAnimations();
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', debouncedScroll, { passive: true });
+    
+    // Initial call to set correct states
+    debouncedScroll();
+});
+
+// Cleanup function for scroll animations
+function cleanupScrollAnimations() {
+    window.removeEventListener('scroll', debouncedScroll);
+}
+
+// Add cleanup on page unload
+window.addEventListener('unload', cleanupScrollAnimations); 
