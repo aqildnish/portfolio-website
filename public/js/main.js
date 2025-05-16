@@ -1,21 +1,25 @@
-// Initialize AOS and handle loading
-document.addEventListener('DOMContentLoaded', () => {
-    // Remove loader immediately
+// Wait for all resources to load
+window.addEventListener('load', () => {
+    // Remove loader
     const loader = document.getElementById('loader');
     if (loader) {
         loader.style.opacity = '0';
-        loader.style.display = 'none';
-        document.body.classList.add('loaded');
+        setTimeout(() => {
+            loader.style.display = 'none';
+            document.body.classList.add('loaded');
+        }, 500);
     }
 
     // Initialize AOS
-    AOS.init({
-        duration: 800,
-        easing: 'ease-out',
-        once: true,
-        offset: 100,
-        disable: window.innerWidth < 768
-    });
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 100,
+            disable: window.innerWidth < 768
+        });
+    }
 
     // Initialize other features
     initTypingAnimation();
@@ -29,14 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
 // Typing Animation
 function initTypingAnimation() {
     const typingText = document.getElementById('typing');
+    if (!typingText) return;
+
     const words = ['Network Engineer', 'Computer Science Student', 'Problem Solver'];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
 
     function type() {
-        if (!typingText) return;
-        
         const currentWord = words[wordIndex];
         
         if (isDeleting) {
@@ -122,6 +126,19 @@ function initCursor() {
                     duration: 0.5
                 });
             });
+
+            // Add hover effect to interactive elements
+            document.querySelectorAll('a, button, .hover-lift').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    this.dot.style.transform = 'scale(0.5)';
+                    this.outline.style.transform = 'scale(1.5)';
+                });
+                
+                el.addEventListener('mouseleave', () => {
+                    this.dot.style.transform = '';
+                    this.outline.style.transform = '';
+                });
+            });
         }
     };
     cursor.init();
@@ -163,6 +180,13 @@ function initContactForm() {
 
 // GSAP Animations
 function initAnimations() {
+    if (typeof gsap === 'undefined') return;
+
+    // Register ScrollTrigger plugin
+    if (typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+    }
+
     // Floating shapes animation
     gsap.to('.shape-1', {
         x: 'random(-100, 100)',
