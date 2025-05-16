@@ -1,14 +1,17 @@
 {
   "name": "portfolio-website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "nodemon server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
     "lint": "next lint"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "next": "^13.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -25,6 +28,20 @@
   },
   "devDependencies": {
     "eslint": "^8.47.0",
-    "eslint-config-next": "^13.4.19"
-  }
-} 
+    "eslint-config-next": "^13.4.19",
+    "nodemon": "^2.0.22"
+  },
+  "description": "A modern portfolio website built with Node.js and Express",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aqildnish/portfolio-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aqildnish/portfolio-website/issues"
+  },
+  "homepage": "https://github.com/aqildnish/portfolio-website#readme"
+}

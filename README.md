@@ -1,62 +1,92 @@
 # Portfolio Website
 
-A modern, responsive portfolio website built with HTML, Tailwind CSS, and JavaScript. This website showcases my professional background, skills, projects, and activities.
+A modern, responsive portfolio website built with Node.js, Express, and Tailwind CSS. This website showcases professional background, skills, projects, and activities.
 
 ## Features
 
-- Responsive design that works on all devices
-- Modern UI with glassmorphism effects
-- Smooth scrolling and animations
-- Interactive sections for projects and skills
-- Contact form for easy communication
-- Dark theme with custom color scheme
+- Modern UI with Tailwind CSS
+- Smooth animations and transitions
+- Custom cursor effects
+- Responsive design
+- Contact form with Node.js backend
+- Dynamic typing animation
+- Interactive project cards
+- Timeline-based education section
+- Skills showcase with hover effects
+- Mobile-friendly navigation
 
 ## Technologies Used
 
-- HTML5
+- Node.js
+- Express.js
 - Tailwind CSS
-- JavaScript
-- Font Awesome Icons
-- Google Fonts
-- AOS (Animate On Scroll)
 - GSAP (GreenSock Animation Platform)
-- Vanilla Tilt
+- AOS (Animate On Scroll)
+- VanillaTilt.js
 
-## Sections
-
-1. Home - Introduction and hero section
-2. About - Professional summary
-3. Education - Academic background
-4. Skills - Technical and soft skills
-5. Projects - Portfolio of work
-6. Activities - Leadership roles and participations
-7. Contact - Contact form and information
-
-## Setup
+## Setup Instructions
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/portfolio-website.git
-```
-
-2. Open the project folder:
-```bash
+git clone https://github.com/aqildnish/portfolio-website.git
 cd portfolio-website
 ```
 
-3. Open `index.html` in your browser or use a local server:
+2. Install dependencies:
 ```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js
-npx serve
+npm install
 ```
 
-## Customization
+3. Create a `.env` file in the root directory and add:
+```
+PORT=3000
+NODE_ENV=development
+```
 
-The website uses Tailwind CSS for styling. The main configuration can be found in the `tailwind.config` section in `index.html`. Colors, fonts, and animations can be customized there.
+4. Start the development server:
+```bash
+npm run dev
+```
+
+5. Open your browser and navigate to `http://localhost:3000`
+
+## Production Deployment
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. Start the production server:
+```bash
+npm start
+```
+
+## Project Structure
+
+```
+portfolio-website/
+├── public/
+│   ├── assets/
+│   │   └── images/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── main.js
+│   └── index.html
+├── server.js
+├── package.json
+└── README.md
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-MIT License - feel free to use this template for your own portfolio! 
+This project is licensed under the MIT License - see the LICENSE file for details. 
