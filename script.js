@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.opacity = '1';
     
     // Handle loader with a shorter timeout
-    const loader = document.querySelector('#loader');
+    const loader = document.querySelector('.loader');
     if (loader) {
         setTimeout(() => {
             console.log('Removing loader');
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Handle loading completion
 function handleLoadingComplete() {
-    const loader = document.querySelector('#loader');
+    const loader = document.querySelector('.loader');
     const body = document.body;
 
     if (!body.classList.contains('loaded')) {
