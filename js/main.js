@@ -43,7 +43,7 @@ function initTypingAnimation() {
     const typingText = $('#typing');
     if (!typingText) return;
 
-    const words = ['Network Engineer', 'Computer Science Student', 'Problem Solver'];
+    const words = ['Computer Network Student'];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;

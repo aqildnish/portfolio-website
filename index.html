@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#000a1a">
     <meta name="description" content="Muhammad Aqil Danish - Network Engineering Student Portfolio">
-    <meta name="keywords" content="Network Engineer, Computer Science, Portfolio, Student">
+    <meta name="keywords" content="Computer Network, Portfolio, Student">
     <meta name="author" content="Muhammad Aqil Danish">
     <title>Muhammad Aqil Danish - Portfolio</title>
     
@@ -117,7 +117,7 @@
     <header class="fixed top-0 left-0 w-full glass-effect z-40 shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold gradient-text">Aqil Danish</div>
+                <div class="text-2xl font-bold gradient-text">Portfolio</div>
                 <button class="lg:hidden text-2xl animated-button" aria-label="Toggle Menu" id="menuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -156,14 +156,14 @@
                 I'm a <span id="typing" class="text-primary"></span>
             </div>
             <p class="text-lg md:text-xl text-secondary mb-8" data-aos="fade-up" data-aos-delay="600">
-                A passionate Network Computer Student with a focus on network technologies and problem solving
+                Welcome to my website portfolio!
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="800">
                 <a href="#contact" class="animated-button bg-primary hover:bg-primary/80 text-white px-8 py-3 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg">
                     Contact Me
                 </a>
                 <a href="#projects" class="animated-button border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-lg transition-all transform hover:-translate-y-1">
-                    View Work
+                    View My Projects
                 </a>
             </div>
         </div>
@@ -175,85 +175,297 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Custom primary color variable (if you're defining it in CSS) */
+        /* Or you can use Tailwind's color classes directly e.g., bg-blue-500 */
+        :root {
+            --primary-color: #3b82f6; /* Example: blue-500 */
+        }
+        .bg-primary {
+            background-color: var(--primary-color);
+        }
+        .text-primary {
+            color: var(--primary-color);
+        }
+        .bg-primary\/20 { /* For classes like bg-primary/20 */
+            background-color: color-mix(in srgb, var(--primary-color) 20%, transparent);
+        }
+        /* Basic body styling for better presentation */
+        body {
+            font-family: 'Inter', sans-serif; /* Common Tailwind font */
+            background-color: #111827; /* A dark background like in your snippet */
+            color: #d1d5db; /* Default light text color */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
     <section id="about" class="py-20 px-4">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary after:rounded pb-4">About Me</h2>
+            
             <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-xl" data-aos="fade-up">
-                <div class="text-lg text-gray-300 space-y-4">
-                    <p>A final year student pursuing a Bachelor of Computer Science (Hons.) Computer Networks with current CGPA 3.7. A dedicated and proactive person with a strong interest in network technologies, designing, and problem solving. Having a strong academic background with a comprehensive understanding of core networking fundamentals, configuration and troubleshooting.</p>
-                    <p class="text-primary font-semibold">Currently seeking an internship placement as a Network Engineer for the period of 15th September 2025 until 19th December 2025 (14 weeks).</p>
+                <div class="flex flex-col md:flex-row items-start gap-6 md:gap-8">
+                    <div class="w-full md:w-1/3 flex-shrink-0">
+                        <img src="./assets/images/logos/profile.png"
+                             alt="Aqil Danish - Profile Picture" 
+                             class="rounded-lg shadow-lg w-full h-full object-cover aspect-rectangle">
+                        </div>
+
+                    <div class="w-full md:w-2/3 text-lg text-gray-300 space-y-4">
+                        <p>Welcome to my portfolio! I'm a final-year Bachelor of Computer Science (Hons.) Computer Networks student. A dedicated and proactive individual passionate about network technologies, innovative design, and effective problem-solving.</p>
+                        <p>My academic journey has provided me with a comprehensive grasp of core networking fundamentals, covering everything from network architecture and protocol analysis to advanced configuration and troubleshooting techniques. I've cultivated a strong understanding of network security best practices, cloud networking concepts, and the fundamentals of network concepts. Each course and project has been an opportunity to translate theoretical knowledge into practical skills, preparing me for the complexities of modern network environments.</p>
+                        <p class="text-primary font-semibold">Status: Currently seeking an internship placement from 15th September 2025 until 19th December 2025 (14 weeks).</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-20 px-4 relative">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary after:rounded pb-4">Education</h2>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          duration: 800, // values from 0 to 3000, with step 50ms
+          once: true, // whether animation should happen only once - while scrolling down
+      });
+    </script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Timeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic body styling for context, assuming dark theme from class names like bg-dark */
+        body {
+            background-color: #1a202c; /* A dark background similar to what bg-dark might represent */
+            color: #e2e8f0; /* A light text color for contrast */
+            font-family: 'Inter', sans-serif; /* Using Inter font as per best practices */
+        }
+        /* Define primary color if not already defined in a global CSS or Tailwind config */
+        /* This is a placeholder, replace with your actual primary color */
+        :root {
+            --color-primary: #3b82f6; /* Example: blue-500 */
+            --color-dark: #111827; /* Example: gray-900 */
+        }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-primary { color: var(--color-primary); }
+        .bg-primary\/20 { background-color: rgba(59, 130, 246, 0.2); } /* Example for primary with 20% opacity */
+        .bg-primary\/50 { background-color: rgba(59, 130, 246, 0.5); } /* Example for primary with 50% opacity */
+        .bg-dark\/30 { background-color: rgba(17, 24, 39, 0.3); } /* Example for dark with 30% opacity */
+        .bg-dark\/50 { background-color: rgba(17, 24, 39, 0.5); } /* Example for dark with 50% opacity */
+
+        /* Custom scrollbar for better aesthetics in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2d3748; /* gray-700 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* gray-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* gray-500 */
+        }
+    </style>
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100%;
+            background-color: rgba(107, 114, 128, 0.5); /* Tailwind gray-400 with 50% opacity */
+        }
+        .timeline-item:last-child::before {
+            height: 0;
+        }
+        .original-card {
+             background-color: rgba(30, 41, 59, 0.3); /* Tailwind dark with 30% opacity */
+        }
+        .detailed-card-appearing-right {
+            /* Removed fixed width and height, using auto */
+            background-color: rgba(30, 41, 59, 0.5); /* Tailwind dark with 50% opacity */
+        }
+         .detailed-card-appearing-left {
+            /* Removed fixed width and height, using auto */
+            background-color: rgba(30, 41, 59, 0.5); /* Tailwind dark with 50% opacity */
+        }
+
+    </style>
+</head>
+<body class="bg-gray-900"> <section id="education" class="py-20 px-4 relative">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-blue-500 after:rounded pb-4 text-gray-100">Education</h2>
         <div class="max-w-6xl mx-auto relative">
-            <!-- Timeline line -->
-            <div class="absolute left-1/2 -translate-x-1/2 w-1 h-full bg-primary/50 top-0"></div>
-            
-            <!-- UiTM Degree -->
-            <div class="timeline-item mb-16 relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center" data-aos="fade-right">
-                <div class="md:text-right md:pr-8">
-                    <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl relative">
-                        <div class="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-primary rounded-full hidden md:block"></div>
-                        <img src="./assets/images/logos/uitm-logo.png" alt="UiTM Logo" class="w-16 h-16 object-contain mb-4 mx-auto md:ml-auto">
-                        <span class="inline-block bg-primary/20 text-primary px-4 py-1 rounded-full text-sm mb-3">2023 - Present</span>
-                        <h3 class="text-xl font-semibold mb-2">Bachelor of Computer Science (Hons.) Computer Networks</h3>
+            <div class="absolute left-1/2 -translate-x-1/2 w-1 h-full bg-blue-500/50 top-0"></div>
+
+            <div class="timeline-item mb-16 relative grid grid-cols-1 md:grid-cols-2 gap-8 items-start" data-aos="fade-right">
+                <div class="md:text-right md:pr-8 relative group">
+                    <div class="original-card rounded-2xl p-6 shadow-xl transition-all duration-500 ease-in-out">
+                        <img src="./assets/images/logos/uitm-logo.png" alt="UiTM Logo" class="w-16 h-16 object-contain mb-4 ml-auto rounded-md">
+                        <span class="inline-block bg-blue-100/20 text-blue-500 px-4 py-1 rounded-full text-sm mb-3">2023 - Present</span>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-100">Bachelor of Computer Science (Hons.) Computer Networks</h3>
                         <p class="text-gray-300 mb-3">Universiti Teknologi MARA (UiTM), Jasin, Melaka</p>
-                        <div class="flex items-center gap-2 text-primary justify-end">
+                        <div class="flex items-center gap-2 text-blue-500 justify-end">
                             <i class="fas fa-star"></i>
                             <span>Current CGPA: 3.7</span>
+                        </div>
+                    </div>
+
+                    <div class="detailed-card-appearing-right absolute top-0 left-[calc(100%+theme(spacing.8))]
+                                     w-full h-auto
+                                     rounded-2xl p-6 shadow-xl text-left
+                                     opacity-0 translate-x-full group-hover:opacity-100 group-hover:translate-x-0
+                                     transition-all duration-500 ease-in-out z-10">
+                        <h4 class="text-lg font-semibold mb-3 text-blue-500">Additional Information</h4>
+                        <div class="space-y-3 text-sm">
+                            <div>
+                                <p class="font-semibold text-gray-100 mb-1">Club Involvement:</p>
+                                <ul class="list-disc list-inside pl-2 text-gray-300 space-y-0.5">
+                                    <li class="list-none text-gray-300">Networking Society UiTM Jasin (NetS) [2023-2024]</li>
+                                    <li class="text-gray-300">Head of Sports Exco</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p class="font-semibold text-gray-100 mb-1">Semester Result (GPA):</p>
+                                <ul class="list-disc list-inside pl-2 text-gray-300 space-y-0.5">
+                                    <li class="text-gray-300">2nd Semester: 3.67</li>
+                                    <li class="text-gray-300">3rd Semester: 3.95</li>
+                                    <li class="text-gray-300">4th Semester: 3.62</li>
+                                    <li class="text-gray-300">5th Semester: 3.59</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="hidden md:block"></div>
             </div>
 
-            <!-- UiTM Diploma -->
-            <div class="timeline-item mb-16 relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center" data-aos="fade-left">
+            <div class="timeline-item mb-16 relative grid grid-cols-1 md:grid-cols-2 gap-8 items-start" data-aos="fade-left">
                 <div class="hidden md:block"></div>
-                <div class="md:pl-8">
-                    <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl relative">
-                        <div class="absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-primary rounded-full hidden md:block"></div>
-                        <img src="./assets/images/logos/uitm-logo.png" alt="UiTM Logo" class="w-16 h-16 object-contain mb-4">
-                        <span class="inline-block bg-primary/20 text-primary px-4 py-1 rounded-full text-sm mb-3">2020 - 2023</span>
-                        <h3 class="text-xl font-semibold mb-2">Diploma in Actuarial Science</h3>
+                <div class="md:pl-8 relative group">
+                    <div class="original-card rounded-2xl p-6 shadow-xl transition-all duration-500 ease-in-out">
+                        <img src="./assets/images/logos/uitm-logo.png" alt="UiTM Logo" class="w-16 h-16 object-contain mb-4 rounded-md">
+                        <span class="inline-block bg-blue-100/20 text-blue-500 px-4 py-1 rounded-full text-sm mb-3">2020 - 2023</span>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-100">Diploma in Actuarial Science</h3>
                         <p class="text-gray-300 mb-3">Universiti Teknologi MARA (UiTM), Seremban, Negeri Sembilan</p>
                         <div class="space-y-2">
-                            <div class="flex items-center gap-2 text-primary">
+                            <div class="flex items-center gap-2 text-blue-500">
                                 <i class="fas fa-star"></i>
                                 <span>Final CGPA: 3.77</span>
                             </div>
-                            <div class="flex items-center gap-2 text-primary">
+                            <div class="flex items-center gap-3 text-blue-500">
                                 <i class="fas fa-award"></i>
                                 <span>MUET: Band 4.5</span>
                             </div>
                         </div>
                     </div>
+                    <div class="detailed-card-appearing-left absolute top-0 right-[calc(100%+theme(spacing.8))]
+                                     w-full h-auto
+                                     rounded-2xl p-6 shadow-xl text-left
+                                     opacity-0 -translate-x-full group-hover:opacity-100 group-hover:translate-x-0
+                                     transition-all duration-500 ease-in-out z-10">
+                        <h4 class="text-lg font-semibold mb-3 text-blue-500">Additional Information</h4>
+                        <div class="space-y-3 text-sm">
+                            <div>
+                                <p class="font-semibold text-gray-100 mb-1">Club Involvement:</p>
+                                <ul class="list-disc list-inside pl-2 text-gray-300 space-y-0.5">
+                                    <li class="list-none text-gray-300">Seremban Actuarial Science Committee (SASCOMM) [2021-2022]</li>
+                                    <li class="text-gray-300">Head of Multimedia and Publicity Exco</li>
+                                </ul>
+                            </div>
+                            <div>
+                                 <p class="font-semibold text-gray-100 mb-1">Semester Results (GPA):</p>
+                                <ul class="list-disc list-inside pl-2 text-gray-300 space-y-0.5">
+                                    <li class="text-gray-300">1st Semester: 3.91</li>
+                                    <li class="text-gray-300">2nd Semester: 3.78</li>
+                                    <li class="text-gray-300">3rd Semester: 3.80</li>
+                                    <li class="text-gray-300">4th Semester: 3.61</li>
+                                    <li class="text-gray-300">5th Semester: 3.74</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- SMKA -->
-            <div class="timeline-item relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center" data-aos="fade-right">
-                <div class="md:text-right md:pr-8">
-                    <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl relative">
-                        <div class="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-primary rounded-full hidden md:block"></div>
-                        <img src="./assets/images/logos/smka-logo.png" alt="SMKA Logo" class="w-16 h-16 object-contain mb-4 mx-auto md:ml-auto">
-                        <span class="inline-block bg-primary/20 text-primary px-4 py-1 rounded-full text-sm mb-3">2015 - 2019</span>
-                        <h3 class="text-xl font-semibold mb-2">Secondary Education</h3>
-                        <p class="text-gray-300 mb-3">SMKA Sheikh Haji Mohd Said</p>
+            <div class="timeline-item relative grid grid-cols-1 md:grid-cols-2 gap-8 items-start" data-aos="fade-right">
+                <div class="md:text-right md:pr-8 relative group">
+                    <div class="original-card rounded-2xl p-6 shadow-xl transition-all duration-500 ease-in-out">
+                        <img src="./assets/images/logos/smka-logo.png" alt="SMKA Logo" class="w-16 h-16 object-contain mb-4 ml-auto rounded-md">
+                        <span class="inline-block bg-blue-100/20 text-blue-500 px-4 py-1 rounded-full text-sm mb-3">2015 - 2019</span>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-100">Secondary Education</h3>
+                        <p class="text-gray-300 mb-3">SMKA Sheikh Haji Mohd Said Seremban</p>
                         <div class="space-y-2">
-                            <div class="flex items-center gap-2 text-primary justify-end">
+                            <div class="flex items-center gap-2 text-blue-500 justify-end">
                                 <i class="fas fa-star"></i>
-                                <span>SPM: 10A</span>
+                                <span>Sijil Pelajaran Malaysia (SPM): 10A</span>
                             </div>
-                            <div class="flex items-center gap-2 text-primary justify-end">
-                                <i class="fas fa-star"></i>
-                                <span>PT3: 9A</span>
+                            <div class="flex items-center gap-2 text-blue-500 justify-end">
+                                 <i class="fas fa-star"></i>
+                                <span>Pentaksiran Tingkatan 3 (PT3): 9A</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detailed-card-appearing-right absolute top-0 left-[calc(100%+theme(spacing.8))]
+                                     w-full h-auto
+                                     rounded-2xl p-6 shadow-xl text-left
+                                     opacity-0 translate-x-full group-hover:opacity-100 group-hover:translate-x-0
+                                     transition-all duration-500 ease-in-out z-10">
+                        <h4 class="text-lg font-semibold mb-3 text-blue-500">Additional Information</h4>
+                        <div class="space-y-3 text-sm">
+                            <div>
+                                <p class="font-semibold text-gray-100 mb-1">Leadership & Co-curricular:</p>
+                                <ul class="list-disc list-inside pl-2 text-gray-300 space-y-0.5">
+                                    <li class="text-gray-300">Secretary of Cooperative Club (2016-2018)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-100 mb-1">Key Achievements:</p>
+                                <ul class="list-disc list-inside pl-2 text-gray-300 space-y-0.5">
+                                    <li class="text-gray-300">Haji International Exploration (Champion) [2018]</li>
+                                    <li class="text-gray-300">Nasyid Competition State Level Open Category (2nd Place) [2018]</li>
+                                    <li class="text-gray-300">Annual Marathon (7th Place) [2017]</li>
+                                    
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -262,29 +474,20 @@
             </div>
         </div>
     </section>
+</body>
+</html>
+
+
+
 
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-4">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary after:rounded pb-4">Skills</h2>
         <div class="max-w-6xl mx-auto space-y-12">
-            <!-- Advanced Skills -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-xl" data-aos="fade-up">
-                <h3 class="text-2xl font-semibold text-primary text-center mb-8">Advanced Skills</h3>
-                <div class="flex flex-wrap justify-center gap-6">
-                    <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
-                        <img src="./assets/images/logos/cisco packet tracer-logo.png" alt="Cisco Packet Tracer" class="w-16 h-16 object-contain mb-4 mx-auto">
-                        <h4 class="text-center font-medium">Cisco Packet Tracer</h4>
-                    </div>
-                    <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
-                        <img src="./assets/images/logos/c++-logo.png" alt="GNS3" class="w-16 h-16 object-contain mb-4 mx-auto">
-                        <h4 class="text-center font-medium">C++</h4>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Intermediate Skills -->
+            <!-- Skills -->
             <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-xl" data-aos="fade-up">
-                <h3 class="text-2xl font-semibold text-primary text-center mb-8">Intermediate Skills</h3>
+                <h3 class="text-2xl font-semibold text-primary text-center mb-8">Experienced in : </h3>
                 <div class="flex flex-wrap justify-center gap-6">
                     <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
                         <img src="./assets/images/logos/gns3-logo.png" alt="GNS3" class="w-16 h-16 object-contain mb-4 mx-auto">
@@ -294,6 +497,14 @@
                         <img src="./assets/images/logos/python-logo.png" alt="Python" class="w-16 h-16 object-contain mb-4 mx-auto">
                         <h4 class="text-center font-medium">Python</h4>
                     </div>
+                    <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
+                        <img src="./assets/images/logos/cisco packet tracer-logo.png" alt="Cisco Packet Tracer" class="w-16 h-16 object-contain mb-4 mx-auto">
+                        <h4 class="text-center font-medium">Cisco Packet Tracer</h4>
+                    </div>
+                    <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
+                        <img src="./assets/images/logos/c++-logo.png" alt="GNS3" class="w-16 h-16 object-contain mb-4 mx-auto">
+                        <h4 class="text-center font-medium">C++</h4>
+                    </div>           
                     <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
                         <img src="./assets/images/logos/mysql-logo.png" alt="GNS3" class="w-16 h-16 object-contain mb-4 mx-auto">
                         <h4 class="text-center font-medium">MySQL</h4>
@@ -312,164 +523,154 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Soft Skills -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-xl" data-aos="fade-up">
-                <h3 class="text-2xl font-semibold text-primary text-center mb-8">Soft Skills</h3>
-                <div class="flex flex-wrap justify-center gap-6">
-                    <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
-                        <i class="fas fa-users text-4xl text-primary mb-4 block text-center"></i>
-                        <h4 class="text-center font-medium">Team Leadership</h4>
-                    </div>
-                    <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
-                        <i class="fas fa-comments text-4xl text-primary mb-4 block text-center"></i>
-                        <h4 class="text-center font-medium">Effective Communication</h4>
-                    </div>
-                    <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
-                        <i class="fas fa-tasks text-4xl text-primary mb-4 block text-center"></i>
-                        <h4 class="text-center font-medium">Problem-solving</h4>
-                    </div>
-                    <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
-                        <i class="fas fa-tools text-4xl text-primary mb-4 block text-center"></i>
-                        <h4 class="text-center font-medium">Troubleshooting</h4>
+            <!-- Achievements -->
+            <section id="achievements" class="py-20 px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative section-header pb-4">Achievements</h2>
+            
+                    <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            
+                            <div class="bg-gray-700/30 p-6 rounded-lg hover:shadow-primary/30 transition-shadow duration-300">
+                                <div class="flex justify-center mb-4">
+                                    <a href="https://www.credly.com/badges/e4c1157b-106f-4883-bf74-8512519588d7/public_url" target="_blank" rel="noopener noreferrer" aria-label="View Credly Badge 1">
+                                        <img src="./assets/images/logos/ccna-introduction-to-networks.png" alt="Credly Badge 1 Placeholder" class="w-32 h-32 object-contain">
+                                    </a>
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-primary mb-2">CCNA: Introduction to Networks</h3>
+                            </div>
+            
+                            <div class="bg-gray-700/30 p-6 rounded-lg shadow-md hover:shadow-primary/30 transition-shadow duration-300">
+                                <div class="flex justify-center mb-4">
+                                    <a href="https://www.credly.com/badges/b2c1117f-36b9-4255-99d5-7ea1a9ad54e8/public_url" target="_blank" rel="noopener noreferrer" aria-label="View Credly Badge 2">
+                                        <img src="./assets/images/logos/ccna-switching-routing-and-wireless-essentials.1.png" alt="Credly Badge 2 Placeholder" class="w-32 h-32 object-contain">
+                                    </a>
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-primary mb-2">CCNA: Switching, Routing, and Wireless Essentials</h3>
+                            </div>
+            
+                            <div class="bg-gray-700/30 p-6 rounded-lg shadow-md hover:shadow-primary/30 transition-shadow duration-300">
+                                <div class="flex justify-center mb-4">
+                                    <a href="https://www.credly.com/badges/5fe71635-5b85-494d-b9a8-84967f913002/public_url" target="_blank" rel="noopener noreferrer" aria-label="View Credly Badge 3">
+                                        <img src="./assets/images/logos/ccna-enterprise-networking-security-and-automation.png" alt="Credly Badge 3 Placeholder" class="w-32 h-32 object-contain">
+                                    </a>
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-primary mb-2">CCNA: Enterprise Networking, Security, and Automation</h3>
+                            </div>
+            
+                            <div class="bg-gray-700/30 p-6 rounded-lg shadow-md hover:shadow-primary/30 transition-shadow duration-300">
+                                <div class="flex justify-center mb-4">
+                                    <a href="https://www.credly.com/badges/3440ebd8-a8b5-4f5c-a16b-c0fcc4945d9f/public_url" target="_blank" rel="noopener noreferrer" aria-label="View Credly Badge 4">
+                                        <img src="./assets/images/logos/introduction-to-iot.png" alt="Credly Badge 4 Placeholder" class="w-32 h-32 object-contain">
+                                    </a>
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-primary mb-2">Introduction to IoT</h3>
+                            </div>
+            
+                            <div class="bg-gray-700/30 p-6 rounded-lg shadow-md hover:shadow-primary/30 transition-shadow duration-300">
+                                <div class="flex justify-center mb-4">
+                                    <a href="https://www.credly.com/badges/c4f97ed5-88ac-43de-9704-0fffe61809f2/public_url" target="_blank" rel="noopener noreferrer" aria-label="View Credly Badge 5">
+                                        <img src="./assets/images/logos/introduction-to-the-threat-landscape-2-0.png" alt="Credly Badge 5 Placeholder" class="w-32 h-32 object-contain">
+                                    </a>
+                                </div>
+                                <h3 class="text-xl font-semibold text-center text-primary mb-2">Introduction to the Threat Landscape 2.0</h3>
+                            </div>
+            
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Languages -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-xl" data-aos="fade-up">
-                <h3 class="text-2xl font-semibold text-primary text-center mb-8">Languages</h3>
-                <div class="flex flex-wrap justify-center gap-6">
-                    <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
-                        <h4 class="text-center font-medium mb-2">Malay</h4>
-                        <p class="text-center text-gray-400">Native</p>
-                    </div>
-                    <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
-                        <h4 class="text-center font-medium mb-2">English</h4>
-                        <p class="text-center text-gray-400">Fluent</p>
-                    </div>
-                    <div class="group bg-dark/50 rounded-xl p-6 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 w-40">
-                        <h4 class="text-center font-medium mb-2">Arabic</h4>
-                        <p class="text-center text-gray-400">Basic</p>
-                    </div>
+            </section>
+                            
+                       
                 </div>
-            </div>
+            </section>
+            
+
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary after:rounded pb-4">Projects</h2>
+    
+    <!-- Projects -->
+    <section id="projects" class="py-20 px-4 bg-gray-900">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-blue-500 after:rounded pb-4 text-gray-100">
+            Course Projects
+        </h2>
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Network Vulnerability Analysis -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl hover:shadow-primary/20 transition-all duration-300" data-aos="fade-up">
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/20 transition-all duration-300" data-aos="fade-up">
                 <div class="space-y-4">
-                    <h3 class="text-2xl font-semibold text-primary">Network Vulnerability Analysis</h3>
-                    <p class="text-lg text-gray-300">Final Year Project</p>
-                    <p class="text-gray-400">Network Vulnerability Analysis and Visualization of Piracy Websites Using Nmap, Gemini API, MySQL and Grafana</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Nmap</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Gemini API</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">MySQL</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Grafana</span>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-blue-400">Final Year Project (In Progress)</h3>
+                    <p class="text-lg text-gray-300">
+                        Network Vulnerability Analysis and Visualization of Piracy Websites Using Nmap, Gemini API, MySQL and Grafana
+                    </p>
+                    <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 font-medium inline-flex items-center gap-2">
+                        See details <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-
-            <!-- Enterprise LAN Implementation -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl hover:shadow-primary/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+    
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                 <div class="space-y-4">
-                    <h3 class="text-2xl font-semibold text-primary">Enterprise LAN Implementation</h3>
-                    <p class="text-lg text-gray-300">Routing and Switching Technologies (ITT532)</p>
-                    <p class="text-gray-400">Implementation of enterprise-level Local Area Network infrastructure</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Cisco</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Routing</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Switching</span>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-blue-400">Routing and Switching Technologies</h3>
+                    <p class="text-lg text-gray-300">Implementation of enterprise-level Local Area Network infrastructure</p>
+        
+                    <a href="https://drive.google.com/file/d/1FJYyW1Cwsy48m3Ni4Ay6UVrIObvkMpdy/view?usp=sharing" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 font-medium inline-flex items-center gap-2">
+                        See details <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-
-            <!-- Network Security -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl hover:shadow-primary/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+    
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
                 <div class="space-y-4">
-                    <h3 class="text-2xl font-semibold text-primary">Network Security - DoS Attack Monitoring</h3>
-                    <p class="text-lg text-gray-300">Information and Network Security (ITT450)</p>
-                    <p class="text-gray-400">Monitoring and analysis of DoS attacks in Computer Networks</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Security</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">DoS</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Monitoring</span>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-blue-400">Information and Network Security</h3>
+                    <p class="text-lg text-gray-300">Monitoring and analysis of DoS attacks in Computer Networks using eNSP</p>
+                    
+                    <a href="https://drive.google.com/file/d/11Ty7gyQAngAJ944k5yCstYue0zL3r9Ua/view?usp=sharing" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 font-medium inline-flex items-center gap-2">
+                        See details <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-
-            <!-- Basic Web Server -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl hover:shadow-primary/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
+    
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
                 <div class="space-y-4">
-                    <h3 class="text-2xl font-semibold text-primary">Basic Web Server Implementation</h3>
-                    <p class="text-lg text-gray-300">Network Programming (ITT440)</p>
-                    <p class="text-gray-400">Create Basic Web Server Using C Socket and HTML</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">C</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Socket Programming</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">HTML</span>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-blue-400">Network Programming</h3>
+                    <p class="text-lg text-gray-300">Creating Basic Web Server Using C Socket and HTML</p>
+                    
+                    <a href="https://youtu.be/azbNBSEIO_k" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 font-medium inline-flex items-center gap-2">
+                        See details <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-
-            <!-- Network Automation -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl hover:shadow-primary/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="800">
+    
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="800">
                 <div class="space-y-4">
-                    <h3 class="text-2xl font-semibold text-primary">Network Automation</h3>
-                    <p class="text-lg text-gray-300">Wide Area Network Technologies (ITT633)</p>
-                    <p class="text-gray-400">Network Automation using Python and GNS3</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Python</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">GNS3</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Automation</span>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-blue-400">Digital Forensics</h3>
+                    <p class="text-lg text-gray-300">Create a jpeg file recovery tool using Python</p>
+                    
+                    <a href="https://github.com/aqildnish/ITT593-PROJECT" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 font-medium inline-flex items-center gap-2">
+                        See details <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-
-            <!-- UiTM KPPIM Network Design -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl hover:shadow-primary/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="1000">
+    
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="1000">
                 <div class="space-y-4">
-                    <h3 class="text-2xl font-semibold text-primary">UiTM KPPIM Network Design</h3>
-                    <p class="text-lg text-gray-300">Network Design and Management (ITT550)</p>
-                    <p class="text-gray-400">UiTM KPPIM New Campus Network Design Project</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Network Design</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Management</span>
-                        <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm">Planning</span>
-                    </div>
+                    <h3 class="text-2xl font-semibold text-blue-400">Network Design and Management</h3>
+                    <p class="text-lg text-gray-300">UiTM KPPIM New Campus Network Design Project</p>
+                    
+                    <a href="https://drive.google.com/file/d/1ZHhvz5vGo93FdTxdp4gFi8Kkss5yLlRQ/view?usp=sharing" class="text-blue-400 hover:text-blue-300 transition-colors duration-200 font-medium inline-flex items-center gap-2">
+                        See details <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Activities Section -->
     <section id="activities" class="py-20 px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary after:rounded pb-4">Activities & Leadership</h2>
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Leadership Roles -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl" data-aos="fade-up">
-                <h3 class="text-2xl font-semibold text-primary mb-6">Leadership Roles</h3>
-                <div class="space-y-6">
-                    <div class="bg-dark/50 rounded-xl p-4 hover:shadow-lg hover:shadow-primary/20 transition-all">
-                        <h4 class="text-lg font-medium mb-2">Head of Multimedia and Publicity Exco</h4>
-                        <p class="text-gray-400">Seremban Actuarial Science Committee (SASCOMM)</p>
-                    </div>
-                    <div class="bg-dark/50 rounded-xl p-4 hover:shadow-lg hover:shadow-primary/20 transition-all">
-                        <h4 class="text-lg font-medium mb-2">Head of Sports Exco</h4>
-                        <p class="text-gray-400">Networking Society Club (NetS)</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Event Organization -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-2xl font-semibold text-primary mb-6">Event Organization</h3>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary after:rounded pb-4">Activities</h2>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="0">
+                <h3 class="text-2xl font-semibold text-primary mb-6">Event Organization & Facilitation</h3>
                 <div class="space-y-6">
                     <div class="bg-dark/50 rounded-xl p-4 hover:shadow-lg hover:shadow-primary/20 transition-all">
                         <p class="text-gray-300">Online Sharing Session with University of Essex, Colchester Campus, England</p>
@@ -477,11 +678,13 @@
                     <div class="bg-dark/50 rounded-xl p-4 hover:shadow-lg hover:shadow-primary/20 transition-all">
                         <p class="text-gray-300">Video Editing Talk: Bersama Cikgu Ulwan</p>
                     </div>
+                    <div class="bg-dark/50 rounded-xl p-4 hover:shadow-lg hover:shadow-primary/20 transition-all">
+                        <p class="text-gray-300">Carnival Fun STEM with Scientist at SMK Dato' Abdul Rahman Ya'kub (SDARY)</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Participations -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="text-2xl font-semibold text-primary mb-6">Participations</h3>
                 <div class="space-y-6">
                     <div class="bg-dark/50 rounded-xl p-4 hover:shadow-lg hover:shadow-primary/20 transition-all">
@@ -490,75 +693,57 @@
                     <div class="bg-dark/50 rounded-xl p-4 hover:shadow-lg hover:shadow-primary/20 transition-all">
                         <p class="text-gray-300">Coding Competition: C++</p>
                     </div>
-                    <div class="bg-dark/50 rounded-xl p-4 hover:shadow-lg hover:shadow-primary/20 transition-all">
-                        <p class="text-gray-300">Carnival Fun STEM with Scientist at SMK Dato' Abdul Rahman Ya'kub (SDARY)</p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-primary after:rounded pb-4">Contact Me</h2>
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Contact Info -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl" data-aos="fade-right">
-                <div class="space-y-8">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                            <i class="fas fa-phone text-primary text-xl"></i>
-                        </div>
-                        <p class="text-lg">014-7385972</p>
+
+    
+      <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+    
+        <section id="contact" class="my-8">
+          <h2 class="text-3xl font-bold mb-4 text-center">Contact Me</h2>
+          <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl mx-auto max-w-lg" data-aos="fade-right">
+            <div class="space-y-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-phone text-primary text-xl"></i>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                            <i class="fas fa-envelope text-primary text-xl"></i>
-                        </div>
-                        <p class="text-lg">aqildanish12@gmail.com</p>
+                    <p class="text-lg">014-7385972</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-envelope text-primary text-xl"></i>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
-                            <i class="fas fa-map-marker-alt text-primary text-xl"></i>
-                        </div>
-                        <p class="text-lg">Mantin, Negeri Sembilan</p>
+                    <a href="mailto:aqildanish12@gmail.com" class="text-lg hover:underline">aqildanish12@gmail.com</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-primary text-xl"></i>
                     </div>
+                    <p class="text-lg">Mantin, Negeri Sembilan</p>
                 </div>
             </div>
+          </div>
+        </section>
+    
+      </main>
+      <footer class="w-full bg-gray-800 text-white text-center py-6 mt-auto">
+        <div class="container mx-auto px-4">
+          <p>&copy; 2025 Muhammad Aqil Danish. All rights reserved.</p>
+        </div>
+      </footer>
+    
+    </body>
 
-            <!-- Contact Form -->
-            <div class="bg-dark/30 backdrop-blur-md rounded-2xl p-6 shadow-xl" data-aos="fade-left">
-                <form id="contact-form" class="space-y-6">
-                    <div>
-                        <input type="text" id="name" name="name" required minlength="2" maxlength="50" placeholder="Your Name" 
-                            class="w-full bg-dark/50 rounded-lg px-4 py-3 border border-gray-700 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors">
-                    </div>
-                    <div>
-                        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Your Email" 
-                            class="w-full bg-dark/50 rounded-lg px-4 py-3 border border-gray-700 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors">
-                    </div>
-                    <div>
-                        <input type="text" id="subject" name="subject" required minlength="5" maxlength="100" placeholder="Subject" 
-                            class="w-full bg-dark/50 rounded-lg px-4 py-3 border border-gray-700 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors">
-                    </div>
-                    <div>
-                        <textarea id="message" name="message" required minlength="10" maxlength="1000" placeholder="Your Message" rows="5"
-                            class="w-full bg-dark/50 rounded-lg px-4 py-3 border border-gray-700 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-primary hover:bg-primary/80 text-white font-medium py-3 rounded-lg transition-colors">
-                        Send Message
-                    </button>
-                </form>
+            
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark/95 py-8 px-4">
-        <div class="max-w-6xl mx-auto text-center">
-            <p class="text-gray-400">&copy; 2024 Muhammad Aqil Danish. All rights reserved.</p>
-        </div>
-    </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
